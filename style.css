@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(226, 80, 36);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  border-bottom: 1px solid border-color;
+  background-color: black;
+  color: whitesmoke;
+}
+header nav .logo {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .logo img {
+  width: 150px;
+  height: 150px;
+}
+header nav label img {
+  width: 30px;
+}
+header nav input {
+  display: none;
+}
+header nav input:checked ~ .btn-menu {
+  max-height: unset;
+}
+header nav .nav-list, header nav .social-list {
+  overflow: hidden;
+  max-height: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.nav-list li a {
+  all: unset;
+  cursor: pointer;
+}
+.nav-list li:hover {
+  background-color: rgb(226, 80, 36);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.social-list li:nth-child(3) img {
+  width: 30px;
+}
+.social-list img {
+  width: 20px;
+}
+
+.shows {
+  margin: 2em;
+}
+.shows .wrapper .series {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: 1px solid black;
+  text-align: center;
+}
+.shows .wrapper .series h2 {
+  margin: 0.4em 0;
+  color: whitesmoke;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.shows .wrapper .series img {
+  width: 100%;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.shows .wrapper .series img a:active {
+  all: unset;
+  cursor: pointer;
+}
+.shows .wrapper .series img:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 45em) {
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav input, header nav .btn-menu {
+    display: none;
+  }
+  header nav input:checked ~ ul {
+    max-height: unset;
+  }
+  header nav .nav-list, header nav .social-list {
+    list-style: none;
+    max-height: unset;
+  }
+  header nav .nav-list {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  header nav .nav-list li a {
+    font-weight: 600;
+  }
+  .shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shows .wrapper {
+    padding: 5px;
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 65em) {
+  .shows .wrapper {
+    padding: 5px;
+    flex-basis: calc(33% - 10px);
+  }
+}/*# sourceMappingURL=style.css.map */
