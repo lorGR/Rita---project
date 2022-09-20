@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(226, 80, 36);
+  background-color: #e25024;
 }
 
 header nav {
@@ -12,7 +12,7 @@ header nav {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 30px;
-  border-bottom: 1px solid border-color;     
+  border-bottom: 1px solid border-color;
   background-color: black;
   color: whitesmoke;
 }
@@ -24,13 +24,15 @@ header nav .logo img {
   width: 150px;
   height: 150px;
 }
+header nav label {
+  position: absolute;
+  right: 50px;
+  top: 60px;
+}
 header nav label img {
   width: 30px;
 }
-header nav input {
-  display: none;
-}
-header nav input:checked ~ .btn-menu {
+header nav input:checked ~ #btn-menu ~ .list {
   max-height: unset;
 }
 header nav .nav-list, header nav .social-list {
@@ -39,10 +41,10 @@ header nav .nav-list, header nav .social-list {
   list-style: none;
 }
 
-/* #btn-menu {
+.nav-list ul {
   display: flex;
-} */
-
+  list-style: none;
+}
 .nav-list li {
   text-align: center;
   padding: 20px 10px;
@@ -54,7 +56,7 @@ header nav .nav-list, header nav .social-list {
   cursor: pointer;
 }
 .nav-list li:hover {
-  background-color: rgb(226, 80, 36);
+  background-color: #e25024;
 }
 
 .social-list {
@@ -62,6 +64,11 @@ header nav .nav-list, header nav .social-list {
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+.social-list ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
 }
 .social-list li:nth-child(3) img {
   width: 30px;
@@ -124,6 +131,7 @@ header nav .nav-list, header nav .social-list {
   header nav .nav-list li a {
     font-weight: 600;
   }
+
   .shows {
     display: flex;
     flex-wrap: wrap;
@@ -139,4 +147,4 @@ header nav .nav-list, header nav .social-list {
     padding: 5px;
     flex-basis: calc(33% - 10px);
   }
-}/*# sourceMappingURL=style.css.map */
+}

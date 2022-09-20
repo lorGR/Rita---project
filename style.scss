@@ -29,15 +29,19 @@ header{
             
         }
         label{
+            position: absolute;
+            right: 50px;
+            top: 60px;
             img{
                 width: 30px;
             }
         }
         input{
-            display: none;
+            // display: none;
         }
-        input:checked ~ .btn-menu{
+        input:checked ~ #btn-menu ~ .list{
             max-height: unset;
+            // display: flex;
         }
 
         .nav-list, .social-list{
@@ -48,6 +52,10 @@ header{
             }
         }
         .nav-list{
+            ul {
+                display: flex;
+                list-style: none;
+            }
             li{
                 text-align: center;
                 padding: 20px 10px;
@@ -69,7 +77,11 @@ header{
             justify-content: center;
             align-items: center;
             gap:5px;
-
+            ul {
+                display: flex;
+                gap: 1rem;
+                list-style: none;
+            }
             li:nth-child(3)  img{
                 width: 30px;
             }
